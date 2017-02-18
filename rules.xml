@@ -1,0 +1,11 @@
+<message_flow name="NieznanyFlow">
+    <rule id="1" name="AttachRequest">
+        <passing_rule>flow['ip.passing'] == message["//*[@name='ip.src']/@show"]</passing_rule>
+        <failing_rule>flow['ip.failing'] == message["//*[@name='ip.src']/@show"]</failing_rule>
+        <failing_rule>flow['tcp.failing'] == message["//*[@name='tcp.srcport']/@show"]</failing_rule>
+        <update_rule>flow['ip.updated'] = message["//*[@name='ip.dst']/@show"]</update_rule>
+    </rule>
+    <rule id="2" name="AttachRequest">
+        <passing_rule>flow['ip.failing'] == message["//*[@name='ip.src']/@show"]</passing_rule>
+    </rule>
+</message_flow>
