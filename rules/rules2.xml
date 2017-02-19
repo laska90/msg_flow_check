@@ -1,0 +1,22 @@
+<message_flow name="NieznanyFlow">
+    <setup>
+    </setup>
+    <rule id="1" name="AttachRequest">
+        <passing_rule>['1'] == message["//*[@name='frame.number']/@show"]</passing_rule>
+    </rule>
+    <rule id="2" name="AttachRequest">
+        <passing_rule>['5'] == message["//*[@name='frame.number']/@show"]</passing_rule>
+    </rule>
+    <rule id="3" name="AttachRequest">
+        <passing_rule>['10'] == message["//*[@name='frame.number']/@show"]</passing_rule>
+    </rule>
+    <rule id="4" name="AttachRequest">
+        <passing_rule>['20'] == message["//*[@name='frame.number']/@show"]</passing_rule>
+    </rule>
+    <rule id="5" name="AttachRequest">
+        <passing_rule>['40'] == message["//*[@name='frame.number']/@show"]</passing_rule>
+    </rule>
+    <rule id="6" name="AttachRequest">
+        <passing_rule>['60'] == message["//*[@name='frame.number']/@show"]</passing_rule>
+    </rule>
+</message_flow>

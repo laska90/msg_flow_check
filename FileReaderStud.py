@@ -9,7 +9,7 @@ class FileReaderStud(object):
     def read_from_file(self):
         with open(self.filename, 'r') as file:
             while True:
-                output = file.read(102400)
+                output = file.read(1024000)
                 self.queue.put(output)
                 if not output:
                     break

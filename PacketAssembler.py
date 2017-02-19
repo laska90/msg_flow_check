@@ -5,7 +5,7 @@ import Message
 
 
 class PacketAssembler(object):
-    def __init__(self, input_queue, output_queue, regex):
+    def __init__(self, input_queue, output_queue, regex='(<packet>(?:.|\n)*?<\/packet>)'):
         self.input_queue = input_queue
         self.output_queue = output_queue
         self.regex = re.compile(regex)
